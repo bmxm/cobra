@@ -36,8 +36,16 @@ Cobra is built on a structure of commands, arguments & flags.
 
 **Commands** represent actions, **Args** are things and **Flags** are modifiers for those actions.
 
+Cobra 构建在命令（commands）、参数（arguments）和 标志（flags）上。
+
+Commands 代表动作，Args 是事物，Flags 是这些动作的修饰符
+
+
 The best applications read like sentences when used, and as a result, users
 intuitively know how to interact with them.
+
+最好的应用程序在使用时会像句子一样读起来。用户将知道如何使用该应用程序，因为他们将自然地了解如何使用它
+
 
 The pattern to follow is
 `APPNAME VERB NOUN --ADJECTIVE.`
@@ -62,6 +70,10 @@ have children commands and optionally run an action.
 
 In the example above, 'server' is the command.
 
+命令是应用程序的核心。应用程序提供的每一个交互都包含在 Command 中。一个命令可以有子命令和可选的运行一个动作。
+
+在上面的示例中，server 是命令。
+
 [More about cobra.Command](https://pkg.go.dev/github.com/spf13/cobra#Command)
 
 ## Flags
@@ -72,6 +84,12 @@ A Cobra command can define flags that persist through to children commands
 and flags that are only available to that command.
 
 In the example above, 'port' is the flag.
+
+一个标志是一种修饰命令行为的方式。Cobra 支持完全符合 POSIX（可移植操作系统接口） 的标志和 Go flag 包。
+
+Cobra 命令可以定义一直保留到子命令的标志和仅可用于该命令的标志。
+
+在上面的例子中，port 是标志。
 
 Flag functionality is provided by the [pflag
 library](https://github.com/spf13/pflag), a fork of the flag standard library
